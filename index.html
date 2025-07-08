@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hafees Javad - Interactive Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ec4899;
+      --dark: #1f2937;
+      --light: #f9fafb;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      padding: 2rem;
+    }
+    .resume {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 1s ease-out;
+    }
+    .left {
+      background: #fce7f3;
+      padding: 2rem;
+      color: #111827;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .left img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+    .left img:hover {
+      transform: scale(1.05);
+    }
+    .left h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.2rem;
+    }
+    .left .job-title {
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-bottom: 1.2rem;
+    }
+    .section {
+      margin-bottom: 1.5rem;
+      width: 100%;
+    }
+    .section h3 {
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+      border-bottom: 2px solid #f9a8d4;
+      padding-bottom: 0.3rem;
+      font-size: 1rem;
+    }
+    .section p,
+    .section li {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .right {
+      padding: 2rem;
+    }
+    .right h2 {
+      font-size: 1.4rem;
+      color: var(--primary);
+      border-bottom: 2px solid #f472b6;
+      margin-bottom: 1rem;
+    }
+    .right ul {
+      padding-left: 1rem;
+    }
+    .download-btn {
+      margin-top: 1.5rem;
+      background: var(--primary);
+      color: white;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .download-btn:hover {
+      background: #be185d;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 768px) {
+      .resume {
+        grid-template-columns: 1fr;
+      }
+      .left, .right {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="resume">
+  <div class="left">
+    <img src="hafees.jpg" alt="Hafees Javad">
+    <h2>Hafees Javad</h2>
+    <div class="job-title">Aspiring Developer & Designer</div>
+    <div class="section">
+      <h3>Contact</h3>
+      <p>Email: hafisjavad5@gmail.com</p>
+      <p>DOB: 06-05-2003</p>
+      <p>Kottayam, Kerala</p>
+    </div>
+    <div class="section">
+      <h3>Languages</h3>
+      <ul><li>English</li><li>Malayalam</li></ul>
+    </div>
+    <div class="section">
+      <h3>Hobbies</h3>
+      <ul><li>UI/UX Design</li><li>3D Modeling</li><li>Coding Challenges</li></ul>
+    </div>
+    <button class="download-btn" onclick="downloadResume()">📄 Download PDF</button>
+  </div>
+  <div class="right">
+    <section>
+      <h2>Profile</h2>
+      <p>Passionate about technology and design, I aim to create impactful solutions with creativity, collaboration, and code.</p>
+    </section>
+    <section>
+      <h2>Education</h2>
+      <ul>
+        <li>B.Tech CSE – FISAT (2022–2026) – CGPA: 6.58</li>
+        <li>Class XII – Vaduthala Jamath HSS – 91%</li>
+        <li>Class X – Lake Mount Public School – 80%</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Internship</h2>
+      <ul>
+        <li>Android App Development – Link Yr Codes (2024)</li>
+        <li>Built basic Android apps with Java and simple UI</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li>To-Do App (Java/Kotlin)</li>
+        <li>3D Game Prototype (Unity + Blender)</li>
+        <li>Grocery Billing System (Open Source)</li>
+        <li>Smart UI/UX Redesign</li>
+        <li><strong>Mini Project:</strong> SmartGist – An innovative knowledge-sharing platform for students and educators.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>UI/UX (Figma, Photoshop)</li>
+        <li>Java, Kotlin, Unity</li>
+        <li>Blender, 3D Design</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Soft Skills</h2>
+      <ul>
+        <li>Creative Thinking</li>
+        <li>Collaboration</li>
+        <li>Communication</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Certificates</h2>
+      <ul>
+        <li>Full Stack Development (AWS)</li>
+        <li>Cloud Computing – Spectrum</li>
+        <li>Android App Development – Link Yr Codes</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Achievements</h2>
+      <ul>
+        <li>School Athletic Head</li>
+        <li>District & Interzone Sprint Winner</li>
+        <li>NSS Lead – College & School</li>
+        <li>Rudersena Blood Cell Head</li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<script>
+  function downloadResume() {
+    window.open('HAFEES_RESUME.pdf', '_blank');
+  }
+</script>
+</body>
+</html>
